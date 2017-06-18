@@ -1,0 +1,23 @@
+{
+  "name": "blueberry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test || set \"NODE_ENV=test\" && mocha server/**/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "geodist": "^0.2.1",
+    "mongoose": "^4.10.6",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
+  }
+}
