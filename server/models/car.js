@@ -15,11 +15,11 @@ var Car = mongoose.model('Car', {
   },
   location: [{
     latitude: {
-      type: String,
+      type: Number,
       require: true,
     },
     longitude: {
-      type: String,
+      type: Number,
       require: true,
     }
   }],

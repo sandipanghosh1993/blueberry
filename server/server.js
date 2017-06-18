@@ -84,9 +84,9 @@ app.put('/startTrip/:tripId', (req, res) => {
 });
 
 app.put('/stopTrip/:tripId/:latitude/:longitude', (req, res) => {
-  var tripId = tripId;
-  var lat = latitude;
-  var lon = longitude;
+  var tripId = req.params.tripId;
+  var lat = req.params.latitude;
+  var lon = req.params.longitude;
 
   Trip.find({tripId: tripId}).then((trip) => {
     if(!trip) {
@@ -95,14 +95,14 @@ app.put('/stopTrip/:tripId/:latitude/:longitude', (req, res) => {
 
     var distance = geodist({lat, lon}, trip.startLocation);
     var timeElapsed = (new Date(trip.startTime).getMinutes()) - (new Date().getMinutes());
-    var pickCharge = 0;
+    var pinkCharge = 0;
     if(trip.pinkCar) {
-      pickCharge = 20;
+      pinkCharge = 20;
     }
 
-    var tripFare = distance+timeElapsed+pickCharge;
+    var tripFare = distance+timeElapsed+pinkCharge;
 
-    message = {
+    var message = {
       sucess: true,
       distance: distance,
       timeElapsed: timeElapsed,

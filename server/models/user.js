@@ -8,7 +8,7 @@ var User = mongoose.model('User', {
     trim: true
   },
   phoneNo: {
-    type: String,
+    type: Number,
     require: true,
     unique: true,
     trim: true

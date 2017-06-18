@@ -17,19 +17,19 @@ var Trip = mongoose.model('Trip', {
     unique: true
   },
   dist: {
-    type: String
+    type: Number
   },
   startTime: {
     type: String
   },
   startLocation: [{
-    latitude: String
+    latitude: Number
   },
   {
-    longitude: String
+    longitude: Number
   }],
   timeElapsed: {
-    type: String
+    type: Number
   },
   pinkCar: {
     type: Boolean,
