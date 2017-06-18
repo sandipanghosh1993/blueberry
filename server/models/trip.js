@@ -23,10 +23,12 @@ var Trip = mongoose.model('Trip', {
     type: String
   },
   startLocation: [{
-    latitude: Number
-  },
-  {
-    longitude: Number
+    latitude: {
+      type: Number
+    },
+    longitude: {
+      type: Number
+    }
   }],
   timeElapsed: {
     type: Number
