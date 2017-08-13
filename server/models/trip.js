@@ -1,3 +1,4 @@
+const c = 100;
 const mongoose = require('mongoose');
 
 var Trip = mongoose.model('Trip', {
